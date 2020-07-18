@@ -4,6 +4,31 @@ namespace Instrucoes
 {
     class Program
     {
+
+        static void Main() // sem esse entrypoint ele nem roda
+        {
+            Console.WriteLine("teste");
+
+
+            // todos estao recebendo como parâmetro (string[] args)
+
+            string[] lista = {"cássio","érika","estopa","logudim"}; 
+
+            InstrucaoIf(lista); 
+            InstrucaoWhile(lista);
+            InstrucaoDo(lista);
+            InstrucaoFor(lista);
+            InstrucaoForeach(lista);
+
+            //testando foreach (tipo o for de python), mas não funciona com int
+            string palavra = "PALAVRA";
+    
+            foreach (char letra in palavra){
+                Console.WriteLine(letra);
+            };
+
+        }
+
         static void Declaracoes()
         {
             int a;
@@ -11,6 +36,7 @@ namespace Instrucoes
             const int d = 4;
             a = 1;
             Console.WriteLine(a + b + c + d);
+
         }
 
         static void InstrucaoIf(string[] args)
@@ -133,7 +159,7 @@ namespace Instrucoes
                 return x / y;
             }
 
-            try
+            try   
             {
                 if (args.Length != 2)
                 {
